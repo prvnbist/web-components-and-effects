@@ -1,0 +1,245 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#wrap {
+  width: 350px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#wrap nav {
+  width: 70px;
+  height: 70px;
+  background: red;
+  border-radius: 90px;
+  -webkit-box-shadow: 4px 4px 30px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 30px -5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.4s cubic-bezier(0.6, -0.05, 0.27, 1.37);
+  transition: 0.4s cubic-bezier(0.6, -0.05, 0.27, 1.37);
+  overflow: hidden;
+}
+
+#wrap nav ul li {
+  width: 70px;
+  height: 70px;
+  float: left;
+  padding-left: 23px;
+  border-radius: 50%;
+}
+
+#wrap nav ul li i {
+  line-height: 70px;
+  font-size: 22px;
+  color: #fff;
+  opacity: 0;
+}
+
+#wrap nav ul li.menu-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#wrap nav ul li.menu-icon .dot {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-left: -3px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+#wrap nav ul li.menu-icon .dot:nth-child(1) {
+  margin-top: 27px;
+}
+
+#wrap nav ul li.menu-icon .dot:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.expand {
+  width: 400px !important;
+}
+
+.active .dot:nth-child(1) {
+  -webkit-animation: barone 0.3s ease-in-out forwards;
+  animation: barone 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes barone {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  25% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  100% {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+}
+
+@keyframes barone {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  25% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  100% {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+}
+
+.active .dot:nth-child(2) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.active .dot:last-child {
+  -webkit-animation: bartwo 0.3s ease-in-out forwards;
+  animation: bartwo 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes bartwo {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  25% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@keyframes bartwo {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  25% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+.icon.one {
+  -webkit-animation: one 0.3s 0.3s ease-in-out forwards;
+  animation: one 0.3s 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes one {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes one {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.icon.two {
+  -webkit-animation: two 0.3s 0.2s ease-in-out forwards;
+  animation: two 0.3s 0.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes two {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes two {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.icon.three {
+  -webkit-animation: three 0.3s 0.2s ease-in-out forwards;
+  animation: three 0.3s 0.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes three {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes three {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.icon.four {
+  -webkit-animation: four 0.3s 0.3s ease-in-out forwards;
+  animation: four 0.3s 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes four {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes four {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

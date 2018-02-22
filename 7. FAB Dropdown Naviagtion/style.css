@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: auto;
+  height: 250px;
+}
+
+nav ul {
+  width: 50px;
+  height: 50px;
+  background: #2ECC71;
+  border-radius: 90px;
+  cursor: pointer;
+  box-shadow: 4px 4px 20px -5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s cubic-bezier(0.98, 0.23, 0.16, 1.28);
+}
+
+li {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+li:not(.menuButton) {
+  justify-content: space-between;
+  margin-left: -70px;
+}
+
+li.menuButton {
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+}
+
+li.menuButton .bar {
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: 0.4s linear;
+}
+
+li.menuButton .bar:nth-child(2) {
+  margin: 3px 0;
+}
+
+.active .bar:first-child {
+  animation: barOne 0.4s ease-in-out forwards;
+}
+
+@keyframes barOne {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(5px) rotate(45deg);
+  }
+}
+
+.active .bar:nth-child(2) {
+  transform: scale(0);
+}
+
+.active .bar:last-child {
+  animation: barTwo 0.4s ease-in-out forwards;
+}
+
+@keyframes barTwo {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}
+
+li i {
+  margin-right: 13px;
+  color: #fff;
+  opacity: 0;
+}
+
+p {
+  font-family: 'Futura PT Regular', sans-serif;
+  color: #2ECC71;
+  font-size: 18px;
+  opacity: 0;
+}
+
+.icon,
+.link {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+#blog,
+.blog {
+  animation-delay: 0.1s;
+}
+
+#work,
+.work {
+  animation-delay: 0.2s;
+}
+
+#about,
+.about {
+  animation-delay: 0.3s;
+}
+
+#contact,
+.contact {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#watchMeCode {
+  position: absolute;
+  right: 2vh;
+  bottom: 2vh;
+  color: red;
+  font-size: 28px;
+  animation: blink 1s ease-in-out infinite alternate;
+}
+
+#watchMeCode i {
+  opacity: 1 !important;
+}
+
+@keyframes blink {
+  100% {
+    transform: scale(1.2);
+  }
+}
